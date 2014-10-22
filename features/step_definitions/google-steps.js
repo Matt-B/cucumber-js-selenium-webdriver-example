@@ -8,7 +8,7 @@ module.exports = function() {
   this.When(/^I search Google for "([^"]*)"$/, function (searchQuery, next) {
     this.driver.get('http://www.google.co.uk/webhp?complete=0');
     this.driver.findElement({ name: 'q' })
-      .sendKeys('cucumbers');
+      .sendKeys(searchQuery);
     this.driver.findElement({ name: 'btnK' })
       .click()
         .then(function() {
