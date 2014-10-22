@@ -1,4 +1,4 @@
-# Automated Browser Testing in JavaScript with Cucumber-JS and Selenium-Webdriver
+# Automated Testing in JavaScript with Cucumber-JS and Selenium-Webdriver
 
 This is an example project using cucumber-js and selenium-webdriver to run browser-based automated tests.
 
