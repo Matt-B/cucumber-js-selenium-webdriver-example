@@ -19,7 +19,7 @@ If all seems OK, Ctrl+C to get rid of that, and carry on:
     git clone git://github.com/Matt-B/cucumber-js-selenium-webdriver-example.git
     cd cucumber-js-selenium-webdriver-example
     npm install
-    grunt
+    node_modules/grunt-cli/bin/grunt
 
 Which should first use jshint to lint the step definitions (options are specified in the Gruntfile.js), and then run the tests, producing output that looks something like:
 
