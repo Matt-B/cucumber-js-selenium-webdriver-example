@@ -1,5 +1,7 @@
 'use strict';
 
+var path = require('path');
+
 module.exports = function(grunt) {
 
   grunt.initConfig({
@@ -15,7 +17,7 @@ module.exports = function(grunt) {
 
     exec: {
       run_cucumber_tests: {
-        command: 'node_modules/cucumber/bin/cucumber.js -f pretty'
+        command: 'node ' + path.join('node_modules', 'cucumber',  'bin', 'cucumber.js -f pretty -t ~@ignore')
       }
     }
 
