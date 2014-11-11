@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "chai": {
-      "version": "1.9.2",
+      "version": "1.10.0",
       "from": "chai@latest",
-      "resolved": "https://registry.npmjs.org/chai/-/chai-1.9.2.tgz",
+      "resolved": "https://registry.npmjs.org/chai/-/chai-1.10.0.tgz",
       "dependencies": {
         "assertion-error": {
           "version": "1.0.0",
@@ -1369,9 +1369,9 @@
       "resolved": "https://registry.npmjs.org/sanitize-filename/-/sanitize-filename-1.1.1.tgz"
     },
     "selenium-webdriver": {
-      "version": "2.43.5",
+      "version": "2.44.0",
       "from": "selenium-webdriver@latest",
-      "resolved": "https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.43.5.tgz",
+      "resolved": "https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.44.0.tgz",
       "dependencies": {
         "adm-zip": {
           "version": "0.4.4",
