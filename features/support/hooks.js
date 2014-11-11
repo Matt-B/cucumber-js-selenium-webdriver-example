@@ -1,10 +1,20 @@
 'use strict';
 
 var driver = require('./world.js').getDriver();
+var fs = require('fs');
+var sanitize = require("sanitize-filename");
 
 var myHooks = function () {
   
   this.After(function(callback) {
+    if(scenario.isFailed()) {
+      this.driver.takeScreenshot().then(function(data){
+        var base64Data = data.replace(/^data:image\/png;base64,/,"")
+        fs.writeFile(sanitize(scenario.getName() + ".png").replace(/ /g,"_"), base64Data, 'base64', function(err) {
+            if(err) console.log(err);
+        });
+      });
+    };
     this.driver.manage().deleteAllCookies()
       .then(function() {
         callback();
@@ -15,6 +25,7 @@ var myHooks = function () {
     driver.close();
     callback();
   });
+
 };
 
 module.exports = myHooks;

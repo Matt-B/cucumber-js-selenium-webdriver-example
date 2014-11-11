@@ -1363,6 +1363,11 @@
       "from": "grunt-exec@latest",
       "resolved": "https://registry.npmjs.org/grunt-exec/-/grunt-exec-0.4.6.tgz"
     },
+    "sanitize-filename": {
+      "version": "1.1.1",
+      "from": "sanitize-filename@>=1.1.1 <1.2.0",
+      "resolved": "https://registry.npmjs.org/sanitize-filename/-/sanitize-filename-1.1.1.tgz"
+    },
     "selenium-webdriver": {
       "version": "2.43.5",
       "from": "selenium-webdriver@latest",
