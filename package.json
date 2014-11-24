@@ -2,6 +2,10 @@
   "name": "cucumber-js-selenium-webdriver-example",
   "version": "0.0.1",
   "description": "A starter for acceptance testing using cucumber-js and webdriver-js.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Matt-B/cucumber-js-selenium-webdriver-example.git"
+  },
   "devDependencies": {
     "cucumber": "~0.4.4",
     "selenium-webdriver": "~2.44.0",
