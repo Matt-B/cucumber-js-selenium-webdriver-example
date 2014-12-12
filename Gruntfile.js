@@ -6,6 +6,15 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    env: {
+      chrome: {
+        PLATFORM: 'CHROME'
+      },
+      android: {
+        PLATFORM: 'ANDROID'
+      }
+    },
+
     jshint: {
       files: ['Gruntfile.js', 'features/step_definitions/*.js', 'features/support/*.js'],
       options: {
@@ -25,7 +34,9 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-env');
 
-  grunt.registerTask('default', ['jshint', 'exec']);
+  grunt.registerTask('default', ['env:chrome', 'jshint', 'exec']);
+  grunt.registerTask('android', ['env:android', 'jshint', 'exec']);
 
 };

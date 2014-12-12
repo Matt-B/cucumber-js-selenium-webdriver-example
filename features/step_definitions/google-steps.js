@@ -9,8 +9,8 @@ module.exports = function() {
     this.driver.get('http://www.google.co.uk/webhp?complete=0');
     this.driver.findElement({ name: 'q' })
       .sendKeys(searchQuery);
-    this.driver.findElement({ name: 'btnK' })
-      .click()
+    this.driver.findElement({ name: 'q' })
+      .sendKeys(this.webdriver.Key.ENTER)
         .then(function() {
           next();
         });
