@@ -23,7 +23,7 @@ var myHooks = function () {
   });
 
   this.registerHandler('AfterFeatures', function (event, callback) {
-    driver.close();
+    driver.quit();
     callback();
   });
 
