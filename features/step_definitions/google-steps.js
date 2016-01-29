@@ -17,8 +17,8 @@ module.exports = function() {
   });
 
   this.Then(/^I should see some results$/, function (next) {
-    this.waitFor('li.g');
-    this.driver.findElements({ css: 'li.g' })
+    this.waitFor('div.g');
+    this.driver.findElements({ css: 'div.g' })
       .then(function(elements) {
         expect(elements.length).to.not.equal(0);
         next();
