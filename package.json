@@ -15,7 +15,7 @@
     "chai": "1.10.0",
     "grunt": "0.4.5",
     "grunt-cli": "0.1.13",
-    "grunt-contrib-jshint": "0.10.0",
+    "grunt-contrib-jshint": "1.0.0",
     "grunt-exec": "0.4.6",
     "grunt-env": "0.4.2",
     "sanitize-filename": "1.1.1",
