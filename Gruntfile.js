@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      files: ['Gruntfile.js', 'features/step_definitions/*.js', 'features/support/*.js'],
+      all: ['Gruntfile.js', 'features/step_definitions/*.js', 'features/support/*.js'],
       options: {
         node: true,
         strict: true,
