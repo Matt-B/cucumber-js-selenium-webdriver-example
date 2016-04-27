@@ -10,6 +10,9 @@ module.exports = function(grunt) {
       chrome: {
         PLATFORM: 'CHROME'
       },
+      firefox: {
+        PLATFORM: 'FIREFOX'
+      },
       android: {
         PLATFORM: 'ANDROID'
       }
@@ -37,6 +40,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-env');
 
   grunt.registerTask('default', ['env:chrome', 'jshint', 'exec']);
+  grunt.registerTask('firefox', ['env:firefox', 'jshint', 'exec']);
   grunt.registerTask('android', ['env:android', 'jshint', 'exec']);
 
 };

@@ -22,9 +22,18 @@ var buildChromeDriver = function() {
     build();
 };
 
+var buildFirefoxDriver = function() {
+  return new webdriver.Builder().
+    withCapabilities(webdriver.Capabilities.firefox()).
+    build();
+};
+
 switch(platform) {
   case 'ANDROID':
     var driver = buildAndroidDriver();
+    break;
+  case 'FIREFOX':
+    var driver = buildFirefoxDriver();
     break;
   default:
     var driver = buildChromeDriver();
