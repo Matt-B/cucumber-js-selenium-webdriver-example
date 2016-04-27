@@ -1,5 +1,7 @@
 # Automated Testing in JavaScript with Cucumber-JS and Selenium-Webdriver
 
+![build status](https://travis-ci.org/Matt-B/cucumber-js-selenium-webdriver-example.svg?branch=master)
+
 This is an example project using cucumber-js and selenium-webdriver to run browser-based automated tests, in both desktop Chrome and Chrome on Android.
 
 I've put this here as it took me a while to get going with this setup, and I thought others might find this useful as a starter to experiment with cucumber and webdriver in JavaScript, or as a base on which to build their own test suites.
