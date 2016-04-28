@@ -1,11 +1,15 @@
 language: node_js
 node_js:
-  - "node"
-
+- node
 env:
 - PLATFORM=FIREFOX
-
 before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
+notifications:
+  email:
+    recipients:
+      secure: DYwbn/1ENwl6+vlHkeBrVYsdL/HojfOJnfHrgY72lWr+Emvr0On28q7hCgb7aRMSi7H0Zx9zelg6625Kd/aTe8MLwfYmysT4tIBsWPXqLslEFMYAsqlExl24xyfEpDEa+QxmMjqWYaYVYTSDgmW0pUCsU0PiKirPJriGWZ2qGJ82sK7aS6Ic4/Hh5NNQ6oO0KscOUtpNlYq6/3Kxd+eQkJEVKNpr2tJqlqwi6T1YtHUT8yHsMpSdSOIWevZLWBcurimeS+l2HJ4PYm2vVmiGwQWBE1ALjHE47bGp+vOPsxIURHzJ77hq/+CBg4dHeviefl2J9tM8/L19zPpocwPz9tttmsEJdXMNHdZVfC0NpggTgIuK32hQeivqEajltYIMEe36qbDjUWcxO0cdzhuQddILNtdEwefANxK0z5e4Ah7weCh2B+ElLlL9iVT7KPYfs4ZdD1rv0V+bwCgZ74nARxU2Nw/ECNbNlBvsjNA64jr3+hFtSkg2TgNHJxv1uhxJun0wf6uSp2cZB46kg91R2BEybfEnV7QdVwOwEYs5scH5jmf3KdZ8N3YaFDhqpalhRXDu3T8x+xBxa2A20uRcJSMgGpLOIQdlb6uajP1TypxHu4tvjMJe7aaAsg/RYz4qwGfQ6IrOgD2AUq6RpAT3xI12TysXi1YkWxJIYLlAUCY=
+    on_success: always
+    on_failure: always
