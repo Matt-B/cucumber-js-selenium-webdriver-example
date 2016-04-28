@@ -10,15 +10,15 @@
     "test": "node_modules/grunt-cli/bin/grunt"
   },
   "devDependencies": {
-    "cucumber": "0.4.4",
-    "selenium-webdriver": "2.53.1",
-    "chai": "1.10.0",
-    "grunt": "0.4.5",
-    "grunt-cli": "0.1.13",
-    "grunt-contrib-jshint": "1.0.0",
-    "grunt-exec": "0.4.6",
-    "grunt-env": "0.4.2",
-    "sanitize-filename": "1.1.1",
-    "appium": "1.3.4"
+    "cucumber": "latest",
+    "selenium-webdriver": "latest",
+    "chai": "latest",
+    "grunt": "latest",
+    "grunt-cli": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-exec": "latest",
+    "grunt-env": "latest",
+    "sanitize-filename": "latest",
+    "appium": "latest"
   }
 }
