@@ -23,8 +23,9 @@ var myHooks = function () {
   });
 
   this.registerHandler('AfterFeatures', function (event, callback) {
-    driver.quit();
-    callback();
+    driver.quit().then(function() {
+      callback();
+    });
   });
 
 };
