@@ -43,7 +43,7 @@ var getDriver = function() {
   return driver;
 };
 
-var World = function World(callback) {
+var World = function World() {
 
   var defaultTimeout = 20000;
   var screenshotPath = "screenshots";
@@ -61,8 +61,6 @@ var World = function World(callback) {
       return driver.isElementPresent({ css: cssLocator });
     }, waitTimeout);
   };
-
-  callback();
 };
 
 module.exports.World = World;
