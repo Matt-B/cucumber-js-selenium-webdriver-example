@@ -7,7 +7,7 @@ var sanitize = require("sanitize-filename");
 
 var myHooks = function () {
   
-  this.After(function(scenario, callback) {
+  this.After(function(scenario) {
     if(scenario.isFailed()) {
       this.driver.takeScreenshot().then(function(data){
         var base64Data = data.replace(/^data:image\/png;base64,/,"");
@@ -16,16 +16,11 @@ var myHooks = function () {
         });
       });
     }
-    this.driver.manage().deleteAllCookies()
-      .then(function() {
-        callback();
-      });
+    return this.driver.manage().deleteAllCookies();
   });
 
-  this.registerHandler('AfterFeatures', function (event, callback) {
-    driver.quit().then(function() {
-      callback();
-    });
+  this.registerHandler('AfterFeatures', function (event) {
+    return driver.quit();
   });
 
 };
