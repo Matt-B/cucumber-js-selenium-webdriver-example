@@ -1,11 +1,12 @@
 'use strict';
 
+var {defineSupportCode} = require('cucumber');
+var {Builder, By, until} = require('selenium-webdriver');
 var fs = require('fs');
-var webdriver = require('selenium-webdriver');
 var platform = process.env.PLATFORM || "CHROME";
 
 var buildAndroidDriver = function() {
-  return new webdriver.Builder().
+  return new Builder().
     usingServer('http://localhost:4723/wd/hub').
     withCapabilities({
       platformName: 'Android',
@@ -17,51 +18,36 @@ var buildAndroidDriver = function() {
 };
 
 var buildChromeDriver = function() {
-  return new webdriver.Builder().
-    withCapabilities(webdriver.Capabilities.chrome()).
-    build();
+  return new Builder().forBrowser("chrome").build();
 };
 
 var buildFirefoxDriver = function() {
-  return new webdriver.Builder().
-    withCapabilities(webdriver.Capabilities.firefox()).
-    build();
+    return new Builder().forBrowser("firefox").build();
 };
 
-switch(platform) {
-  case 'ANDROID':
-    var driver = buildAndroidDriver();
-    break;
-  case 'FIREFOX':
-    var driver = buildFirefoxDriver();
-    break;
-  default:
-    var driver = buildChromeDriver();
-}
-
-var getDriver = function() {
-  return driver;
+var buildDriver = function() {
+  switch(platform) {
+    case 'ANDROID':
+      return buildAndroidDriver();
+    case 'FIREFOX':
+      return buildFirefoxDriver();
+    default:
+      return buildChromeDriver();
+  }
 };
 
 var World = function World() {
 
-  var defaultTimeout = 20000;
   var screenshotPath = "screenshots";
 
-  this.webdriver = webdriver;
-  this.driver = driver;
+  this.driver = buildDriver();
 
   if(!fs.existsSync(screenshotPath)) {
     fs.mkdirSync(screenshotPath);
   }
-  
-  this.waitFor = function(cssLocator, timeout) {
-    var waitTimeout = timeout || defaultTimeout;
-    return driver.wait(function() {
-      return driver.isElementPresent({ css: cssLocator });
-    }, waitTimeout);
-  };
+
 };
 
-module.exports.World = World;
-module.exports.getDriver = getDriver;
+defineSupportCode(function({setWorldConstructor}) {
+    setWorldConstructor(World);
+});
