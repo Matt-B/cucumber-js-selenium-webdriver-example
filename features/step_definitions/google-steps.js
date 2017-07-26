@@ -21,7 +21,7 @@ defineSupportCode(function({When, Then}) {
     this.driver.wait(until.elementLocated(By.css('div.g')));
     this.driver.findElements(By.css('div.g'))
       .then(function(elements) {
-        expect(elements.length).to.equal(0);
+        expect(elements.length).to.not.equal(0);
         next();
       });
   });
