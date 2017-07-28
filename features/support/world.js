@@ -36,6 +36,10 @@ var buildDriver = function() {
   }
 };
 
+defineSupportCode(function({setDefaultTimeout}) {
+    setDefaultTimeout(60 * 1000);
+});
+
 var World = function World() {
 
   var screenshotPath = "screenshots";
