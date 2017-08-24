@@ -65,7 +65,8 @@ If you haven't done so already, ensure you've got the project and installed depe
 
 This will install Appium, but you'll need to start the server (it's probably best to do this in a separate terminal):
 
-    node_modules/appium/bin/appium.js
+    cd node_modules/appium/
+    node . 
 
 Once that has started successfully, then try running the test:
 
