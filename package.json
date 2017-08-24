@@ -10,7 +10,7 @@
     "test": "node_modules/grunt-cli/bin/grunt"
   },
   "devDependencies": {
-    "cucumber": "latest",
+    "cucumber": "2.3.1",
     "selenium-webdriver": "latest",
     "chai": "latest",
     "grunt": "latest",
