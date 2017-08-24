@@ -22,14 +22,14 @@ module.exports = function(grunt) {
       all: ['Gruntfile.js', 'features/step_definitions/*.js', 'features/support/*.js'],
       options: {
         node: true,
-        strict: true,
-        globalstrict: true
+        strict: "global",
+        esversion: 6
       }
     },
 
     exec: {
       run_cucumber_tests: {
-        command: 'node ' + path.join('node_modules', 'cucumber',  'bin', 'cucumber.js -f pretty -t ~@ignore')
+        command: path.join('node_modules', 'cucumber',  'bin', 'cucumber.js')
       }
     }
 
