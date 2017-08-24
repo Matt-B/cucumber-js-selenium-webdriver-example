@@ -10,8 +10,7 @@ var buildAndroidDriver = function() {
     usingServer('http://localhost:4723/wd/hub').
     withCapabilities({
       platformName: 'Android',
-      platformVersion: '4.4',
-      deviceName: 'Android Emulator',
+      deviceName: 'Android device',
       browserName: 'Chrome'
     }).
     build();
