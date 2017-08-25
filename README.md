@@ -6,7 +6,7 @@ This is an example project using cucumber-js and selenium-webdriver to run brows
 
 I've put this here as it took me a while to get going with this setup, and I thought others might find this useful as a starter to experiment with cucumber and webdriver in JavaScript, or as a base on which to build their own test suites.
 
-Currently, the project has a single test which searches Google for 'cucumbers' and verifies some results are shown. It runs the tests in Chrome and so you'll need Chrome and the Chromedriver executable on your path. If you're running the tests on Android, you'll need an Android device with Chrome installed. All the JavaScript is linted using jshint before the tests are run (using options specified in the Gruntfile). If any scenarios fail, a screenshot will be taken as a PNG and put in ./screenshots/. After each scenario all cookies are deleted (in the context of the page the browser is displaying at the time) and after the tests are finished Cucumber shuts down the Webdriver instance.
+Currently, the project has a single test which searches Google for 'cucumbers' and verifies some results are shown. It runs the tests in Chrome and so you'll need Chrome and the Chromedriver executable on your path. If you're running the tests on Android, you'll need an Android device with Chrome installed. All the JavaScript is linted using jshint before the tests are run (using options specified in the Gruntfile). If any scenarios fail, a screenshot will be taken as a PNG and put in ./screenshots/. After the tests are finished Cucumber shuts down the Webdriver instance.
 
 ## Running the tests on the desktop
 
